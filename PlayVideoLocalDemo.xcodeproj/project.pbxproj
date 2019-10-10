@@ -12,6 +12,11 @@
 		96759E5F234EDDD9003A94B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96759E5D234EDDD9003A94B1 /* Main.storyboard */; };
 		96759E61234EDDDA003A94B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96759E60234EDDDA003A94B1 /* Assets.xcassets */; };
 		96759E64234EDDDA003A94B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96759E62234EDDDA003A94B1 /* LaunchScreen.storyboard */; };
+		96759E6C234EE6B7003A94B1 /* videoTest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96759E6B234EE160003A94B1 /* videoTest.mp4 */; };
+		96759E6E234F0319003A94B1 /* love.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96759E6D234F0309003A94B1 /* love.mp4 */; };
+		96759E70234F03D1003A94B1 /* 1553595975720.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96759E6F234F03C8003A94B1 /* 1553595975720.mp4 */; };
+		96759E74234F11F0003A94B1 /* PlayVideoOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96759E73234F11F0003A94B1 /* PlayVideoOnline.swift */; };
+		96759E76234F16FF003A94B1 /* lactroi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 96759E75234F16C1003A94B1 /* lactroi.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		96759E60234EDDDA003A94B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96759E63234EDDDA003A94B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96759E65234EDDDA003A94B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96759E6B234EE160003A94B1 /* videoTest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoTest.mp4; sourceTree = "<group>"; };
+		96759E6D234F0309003A94B1 /* love.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = love.mp4; sourceTree = "<group>"; };
+		96759E6F234F03C8003A94B1 /* 1553595975720.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1553595975720.mp4; sourceTree = "<group>"; };
+		96759E73234F11F0003A94B1 /* PlayVideoOnline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoOnline.swift; sourceTree = "<group>"; };
+		96759E75234F16C1003A94B1 /* lactroi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lactroi.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				96759E59234EDDD8003A94B1 /* AppDelegate.swift */,
-				96759E5B234EDDD9003A94B1 /* ViewController.swift */,
+				96759E71234F117D003A94B1 /* PlayVideoInLocal */,
+				96759E72234F119C003A94B1 /* PlayVideoOnline */,
 				96759E5D234EDDD9003A94B1 /* Main.storyboard */,
 				96759E60234EDDDA003A94B1 /* Assets.xcassets */,
 				96759E62234EDDDA003A94B1 /* LaunchScreen.storyboard */,
 				96759E65234EDDDA003A94B1 /* Info.plist */,
 			);
 			path = PlayVideoLocalDemo;
+			sourceTree = "<group>";
+		};
+		96759E71234F117D003A94B1 /* PlayVideoInLocal */ = {
+			isa = PBXGroup;
+			children = (
+				96759E5B234EDDD9003A94B1 /* ViewController.swift */,
+				96759E6B234EE160003A94B1 /* videoTest.mp4 */,
+				96759E6D234F0309003A94B1 /* love.mp4 */,
+				96759E75234F16C1003A94B1 /* lactroi.mp4 */,
+				96759E6F234F03C8003A94B1 /* 1553595975720.mp4 */,
+			);
+			path = PlayVideoInLocal;
+			sourceTree = "<group>";
+		};
+		96759E72234F119C003A94B1 /* PlayVideoOnline */ = {
+			isa = PBXGroup;
+			children = (
+				96759E73234F11F0003A94B1 /* PlayVideoOnline.swift */,
+			);
+			path = PlayVideoOnline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96759E76234F16FF003A94B1 /* lactroi.mp4 in Resources */,
+				96759E70234F03D1003A94B1 /* 1553595975720.mp4 in Resources */,
+				96759E6E234F0319003A94B1 /* love.mp4 in Resources */,
+				96759E6C234EE6B7003A94B1 /* videoTest.mp4 in Resources */,
 				96759E64234EDDDA003A94B1 /* LaunchScreen.storyboard in Resources */,
 				96759E61234EDDDA003A94B1 /* Assets.xcassets in Resources */,
 				96759E5F234EDDD9003A94B1 /* Main.storyboard in Resources */,
@@ -137,6 +172,7 @@
 			files = (
 				96759E5C234EDDD9003A94B1 /* ViewController.swift in Sources */,
 				96759E5A234EDDD8003A94B1 /* AppDelegate.swift in Sources */,
+				96759E74234F11F0003A94B1 /* PlayVideoOnline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

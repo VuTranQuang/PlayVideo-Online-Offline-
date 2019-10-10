@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tad-PY-tuD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,123 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayVideoLocalDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot03" translatesAutoresizingMaskIntoConstraints="NO" id="w6l-k1-dlp">
+                                <rect key="frame" x="0.0" y="222.5" width="375" height="222"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE1-7u-EaW">
+                                <rect key="frame" x="112.5" y="291.5" width="150" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GE1-7u-EaW" secondAttribute="height" multiplier="16:9" id="mD4-xw-FsT"/>
+                                </constraints>
+                                <state key="normal" image="playBtn"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chF-Cq-qC3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GE1-7u-EaW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Bzx-o2-nbp"/>
+                            <constraint firstItem="GE1-7u-EaW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DEC-WC-pdB"/>
+                            <constraint firstItem="w6l-k1-dlp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fub-Ld-mzy"/>
+                            <constraint firstItem="GE1-7u-EaW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kih-xD-fBC"/>
+                            <constraint firstItem="w6l-k1-dlp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/3" id="ZYW-H8-YbJ"/>
+                            <constraint firstItem="w6l-k1-dlp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s6A-Vh-CUk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ko3-cT-8aL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1074" y="-787"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3yP-Jz-2Cn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tad-PY-tuD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o7c-PU-kKS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vd8-rr-eZN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IB6-Hy-Ui1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="-814"/>
+        </scene>
+        <!--Play Video Online-->
+        <scene sceneID="GsP-6I-Tca">
+            <objects>
+                <viewController id="Yrh-Ly-uQz" customClass="PlayVideoOnline" customModule="PlayVideoLocalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TyM-IQ-EmR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot_2019-09-13-16-44-48-739_com.facebook.katana" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-JK-CH4">
+                                <rect key="frame" x="-10" y="222.5" width="395" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kar-JK-CH4" secondAttribute="height" multiplier="16:9" id="Ty1-cv-W3u"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yst-1t-fUK">
+                                <rect key="frame" x="112.5" y="291.5" width="150" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yst-1t-fUK" secondAttribute="height" multiplier="16:9" id="8Vd-dO-Ke3"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onClickPlayVideo:" destination="Yrh-Ly-uQz" eventType="touchUpInside" id="j7n-MA-Y0G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kar-JK-CH4" firstAttribute="centerY" secondItem="TyM-IQ-EmR" secondAttribute="centerY" id="7vK-IS-Vqh"/>
+                            <constraint firstItem="Yst-1t-fUK" firstAttribute="centerX" secondItem="TyM-IQ-EmR" secondAttribute="centerX" id="SNj-z3-KaK"/>
+                            <constraint firstItem="Kar-JK-CH4" firstAttribute="centerX" secondItem="TyM-IQ-EmR" secondAttribute="centerX" id="fzE-1A-Kt6"/>
+                            <constraint firstItem="Yst-1t-fUK" firstAttribute="width" secondItem="TyM-IQ-EmR" secondAttribute="width" multiplier="0.4" id="gdq-mL-Tkz"/>
+                            <constraint firstItem="Yst-1t-fUK" firstAttribute="centerY" secondItem="TyM-IQ-EmR" secondAttribute="centerY" id="nAg-Rx-ywc"/>
+                            <constraint firstItem="Kar-JK-CH4" firstAttribute="height" secondItem="TyM-IQ-EmR" secondAttribute="height" multiplier="1/3" id="wSv-ls-97r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gbk-6h-Flv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cTb-dD-0S4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqi-Tt-PT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813.5999999999999" y="-115.59220389805098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I7p-rV-vep">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tto-6o-Gwm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A2J-eK-tZR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yrh-Ly-uQz" kind="relationship" relationship="rootViewController" id="G0R-t5-EYa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aT-he-MYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.79999999999995" y="-116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screenshot_2019-09-13-16-44-48-739_com.facebook.katana" width="1920" height="1080"/>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot03" width="375" height="220"/>
+    </resources>
 </document>
